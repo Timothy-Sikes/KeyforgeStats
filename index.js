@@ -13,9 +13,7 @@ app.use(express.static('./html/'));
 
 
 app.get('*', asyncMiddleware(async function (req, res) {
-  console.log("home")
-
-  res.sendFile(path.join(__dirname + '/html/KeyforgeStats.nb.html'));
+  res.sendFile(path.join(__dirname + '/html/KeyforgeStats.html'));
 }));
   
 app.listen((process.env.PORT || 8000));
